@@ -4,12 +4,6 @@ public class Salary {
 
     private double salary;
 
-    public Salary(){}
-
-    public Salary(double salary) {
-        this.salary = salary;
-    }
-
     public double getSalary() {
         return salary;
     }

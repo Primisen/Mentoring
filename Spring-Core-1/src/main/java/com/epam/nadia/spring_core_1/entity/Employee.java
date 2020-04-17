@@ -4,12 +4,16 @@ public class Employee {
 
     private String name;
     private Position position;
+    private String skill;
+    private int skillLevel;
 
-    public Employee(){}
+    public Employee() {
+    }
 
-    public Employee(String name, Position position) {
+    public Employee(String name, String skill, int skillLevel) {
         this.name = name;
-        this.position = position;
+        this.skill = skill;
+        this.skillLevel = skillLevel;
     }
 
     public String getName() {
@@ -27,4 +31,21 @@ public class Employee {
     public void setPosition(Position position) {
         this.position = position;
     }
+
+    public String getSkill() {
+        return skill;
+    }
+
+    public void setSkill(String skill) {
+        this.skill = skill;
+    }
+
+    public int getSkillLevel() {
+        return skillLevel;
+    }
+
+    public void setSkillLevel(int skillLevel) {
+        this.skillLevel = skillLevel;
+    }
+
 }

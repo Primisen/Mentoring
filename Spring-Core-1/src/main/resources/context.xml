@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean name="Alex" class="com.epam.nadia.spring_core_1.entity.Employee">
+        <constructor-arg index="0" value="Alex"/>
+        <constructor-arg index="1" value="Java"/>
+        <constructor-arg index="2" value="3"/>
+    </bean>
+
+    <bean name="Egor" class="com.epam.nadia.spring_core_1.entity.Employee">
+        <constructor-arg index="0" value="Egor"/>
+        <constructor-arg index="1" value=".NET"/>
+        <constructor-arg index="2" value="2"/>
+    </bean>
+
+    <bean name="Lena" class="com.epam.nadia.spring_core_1.entity.Employee">
+        <constructor-arg index="0" value="Lena"/>
+        <constructor-arg index="1" value="Python"/>
+        <constructor-arg index="2" value="4"/>
+    </bean>
+
+    <bean name="Max" class="com.epam.nadia.spring_core_1.entity.Employee">
+        <constructor-arg index="0" value="Max"/>
+        <constructor-arg index="1" value="Java"/>
+        <constructor-arg index="2" value="8"/>
+    </bean>
+
+    <bean name="Java8" class="com.epam.nadia.spring_core_1.entity.Position" autowire="byType">
+        <property name="ante" value="250"/>
+        <property name="level" value="8"/>
+        <property name="numberOfWorkDays" value="20"/>
+    </bean>
+
+</beans>

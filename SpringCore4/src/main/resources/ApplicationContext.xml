@@ -29,4 +29,9 @@
         <property name="cat" ref="С"/>
         <replaced-method name="changeTheNameOfTheCat" replacer="methodWhichChangeCatName"/>
     </bean>
+
+    <bean name="F" class="epam.nadia.spring_core_4.main.task1.entity.BeanLifeCycleDemonstration"
+          init-method="init"
+          destroy-method="destroy"/>
+
 </beans>

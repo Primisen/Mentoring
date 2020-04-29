@@ -11,4 +11,14 @@
         <constructor-arg name="name" value="Кузя"/>
         <constructor-arg name="age" value="3"/>
     </bean>
+
+    <bean name="С" class="epam.nadia.spring_core_4.main.task1.entity.Cat">
+        <property name="name" value="Томас"/>
+        <property name="age" value="2"/>
+        <property name="favoriteFood" ref="D"/>
+    </bean>
+
+    <bean name="D" class="epam.nadia.spring_core_4.main.task1.entity.Food" scope="prototype">
+        <property name="food" value="Fish"/>
+    </bean>
 </beans>

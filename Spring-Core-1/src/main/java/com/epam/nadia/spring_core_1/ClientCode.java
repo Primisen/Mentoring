@@ -2,7 +2,7 @@ package com.epam.nadia.spring_core_1;
 
 import com.epam.nadia.spring_core_1.entity.Employee;
 import com.epam.nadia.spring_core_1.entity.Position;
-import com.epam.nadia.spring_core_1.service.SalaryService;
+import com.epam.nadia.spring_core_1.service.SalaryServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,7 +16,7 @@ public class ClientCode {
         Employee max = (Employee) context.getBean("Max");
 
         Position position = (Position) context.getBean("Java8");
-        SalaryService.calculate(position);
+        SalaryServiceImpl.calculate(position);
         System.out.println(position);
     }
 }

@@ -4,16 +4,12 @@ public class Employee {
 
     private String name;
     private Position position;
-    private String skill;
-    private int skillLevel;
 
     public Employee() {
     }
 
     public Employee(String name, String skill, int skillLevel) {
         this.name = name;
-        this.skill = skill;
-        this.skillLevel = skillLevel;
     }
 
     public String getName() {
@@ -32,20 +28,12 @@ public class Employee {
         this.position = position;
     }
 
-    public String getSkill() {
-        return skill;
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Employee{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", position=").append(position);
+        sb.append('}');
+        return sb.toString();
     }
-
-    public void setSkill(String skill) {
-        this.skill = skill;
-    }
-
-    public int getSkillLevel() {
-        return skillLevel;
-    }
-
-    public void setSkillLevel(int skillLevel) {
-        this.skillLevel = skillLevel;
-    }
-
 }

@@ -20,9 +20,6 @@ public class Main {
 
         Person person1 = (Person) applicationContext.getBean("E");
         person1.changeTheNameOfTheCat("Vassiliy");
-
-        BeanLifeCycleDemonstration beanLifeCycleDemonstration = (BeanLifeCycleDemonstration) applicationContext.getBean("F");
-        print(beanLifeCycleDemonstration);
     }
 
     private static void print(Object object){

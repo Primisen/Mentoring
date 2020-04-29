@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="A" class="epam.nadia.spring_core_4.main.task1.entity.Person">
+    <bean name="A" class="epam.nadia.spring_core_4.main.task1.entity.person.Person">
         <property name="name" value="This is bean created with setter injection. Its name is A."/>
     </bean>
 
@@ -20,5 +20,13 @@
 
     <bean name="D" class="epam.nadia.spring_core_4.main.task1.entity.Food" scope="prototype">
         <property name="food" value="Fish"/>
+    </bean>
+
+    <bean name="methodWhichChangeCatName" class="epam.nadia.spring_core_4.main.task1.entity.person.MethodReplacer"/>
+
+    <bean name="E" class="epam.nadia.spring_core_4.main.task1.entity.person.Person">
+        <property name="name" value="Gleb"/>
+        <property name="cat" ref="С"/>
+        <replaced-method name="changeTheNameOfTheCat" replacer="methodWhichChangeCatName"/>
     </bean>
 </beans>

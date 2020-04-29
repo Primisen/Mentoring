@@ -3,5 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-   
+    <bean name="A" class="epam.nadia.spring_core_4.main.task1.entity.Person">
+        <property name="name" value="This is bean created with setter injection. Its name is A."/>
+    </bean>
 </beans>

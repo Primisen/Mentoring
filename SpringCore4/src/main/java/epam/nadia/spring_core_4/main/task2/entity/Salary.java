@@ -1,8 +1,13 @@
 package epam.nadia.spring_core_4.main.task2.entity;
 
+import java.util.Random;
+
 public class Salary {
 
     private double salary;
+
+    public Salary(){
+    }
 
     public double getSalary() {
         return salary;

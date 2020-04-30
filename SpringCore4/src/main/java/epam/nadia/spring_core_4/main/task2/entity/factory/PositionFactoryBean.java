@@ -1,4 +1,4 @@
-package epam.nadia.spring_core_4.main.task2.entity.factory_bean;
+package epam.nadia.spring_core_4.main.task2.entity.factory;
 
 import epam.nadia.spring_core_4.main.task2.entity.Position;
 import epam.nadia.spring_core_4.main.task2.entity.Salary;

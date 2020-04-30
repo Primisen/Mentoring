@@ -1,22 +1,22 @@
 package epam.nadia.spring_core_4.main.task2;
 
-import com.epam.nadia.spring_core_1.entity.Employee;
-import com.epam.nadia.spring_core_1.entity.Position;
-import com.epam.nadia.spring_core_1.service.SalaryServiceImpl;
+import epam.nadia.spring_core_4.main.task2.entity.Employee;
+import epam.nadia.spring_core_4.main.task2.entity.Position;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ClientCode {
+public class Main {
+
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 
-        Employee egor = (Employee) context.getBean("Egor");
-        Employee alex = (Employee) context.getBean("Alex");
-        Employee lena = (Employee) context.getBean("Lena");
-        Employee max = (Employee) context.getBean("Max");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("ApplicationContextFactoryMethod.xml");
 
-        Position position = (Position) context.getBean("Java8");
-        SalaryServiceImpl.calculate(position);
-        System.out.println(position);
+        Employee ilya = (Employee) applicationContext.getBean("Ilya");
+        print(ilya);
+
+    }
+
+    private static void print(Object object){
+        System.out.println(object);
     }
 }

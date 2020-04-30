@@ -1,7 +1,7 @@
 package epam.nadia.spring_core_4.main.task2.service.interfeces;
 
-import com.epam.nadia.spring_core_1.entity.Employee;
-import com.epam.nadia.spring_core_1.entity.Position;
+import epam.nadia.spring_core_4.main.task2.entity.Employee;
+import epam.nadia.spring_core_4.main.task2.entity.Position;
 
 public interface EmployeeService {
 

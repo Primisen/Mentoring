@@ -1,6 +1,6 @@
 package epam.nadia.spring_core_4.main.task2.service;
 
-import com.epam.nadia.spring_core_1.service.interfeces.SalaryService;
+import epam.nadia.spring_core_4.main.task2.service.interfeces.SalaryService;
 
 import java.util.Random;
 

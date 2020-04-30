@@ -3,8 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="Manager" class="epam.nadia.spring_core_4.main.task2.entity.factory.PositionFactoryBean">
+    <bean name="Manager" class="epam.nadia.spring_core_4.main.task2.entity.factory.PositionFactoryBean" scope="prototype">
         <property name="salary" ref="SalaryForManager"/>
+    </bean>
+
+    <bean name="English" class="epam.nadia.spring_core_4.main.task2.entity.Skill">
+        <property name="name" value="English"/>
+        <property name="level" value="5"/>
     </bean>
 
     <bean name="SalaryForManager" class="epam.nadia.spring_core_4.main.task2.entity.Salary">

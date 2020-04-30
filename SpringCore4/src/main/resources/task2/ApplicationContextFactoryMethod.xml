@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="DevOps" class="epam.nadia.spring_core_4.main.task2.entity.factory.PositionFactoryMethod"
+          factory-method="getPosition">
+        <property name="salary" ref="SalaryForDevOps"/>
+    </bean>
+
+    <bean name="SalaryForDevOps" class="epam.nadia.spring_core_4.main.task2.entity.Salary">
+        <property name="salary" value="1200"/>
+    </bean>
+
+</beans>

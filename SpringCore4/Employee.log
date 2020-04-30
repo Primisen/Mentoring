@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-04-30T13:41:33.836699800Z</date>
+  <millis>1588254093836</millis>
+  <nanos>699800</nanos>
+  <sequence>2</sequence>
+  <logger>epam.nadia.spring_core_4.main.task2.entity.Employee</logger>
+  <level>INFO</level>
+  <class>epam.nadia.spring_core_4.main.task2.entity.Employee</class>
+  <method>initialize</method>
+  <thread>1</thread>
+  <message>Initialize.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-04-30T14:08:11.571024300Z</date>
+  <millis>1588255691571</millis>
+  <nanos>24300</nanos>
+  <sequence>2</sequence>
+  <logger>epam.nadia.spring_core_4.main.task2.entity.Employee</logger>
+  <level>INFO</level>
+  <class>epam.nadia.spring_core_4.main.task2.entity.Employee</class>
+  <method>initialize</method>
+  <thread>1</thread>
+  <message>Initialize.</message>
+</record>
+</log>

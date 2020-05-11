@@ -1,31 +1,41 @@
 package com.epam.nadia.spring_core_1.util;
 
-import com.epam.nadia.spring_core_1.entity.Employee;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
 
 public class Deserialization {
 
-    public static void deserialize(String fileName){ //метод дженерик
+    private static final Logger LOGGER = LogManager.getLogger(Deserialization.class.getName());
 
-        // Deserialization
+    private Deserialization(){}
+
+    public static<T> T deserialize(String fileName){
+
+        T object = null;
+
         try {
             // Reading the object from a file
             FileInputStream file = new FileInputStream(fileName);
             ObjectInputStream in = new ObjectInputStream(file);
 
             // Method for deserialization of object
-            object1 = (Employee) in.readObject();//!
+            object = (T) in.readObject();
 
             in.close();
             file.close();
 
-            System.out.println("Object has been deserialized ");
-            System.out.println("name = " + object1.getName());
+            LOGGER.info("Object has been deserialized");
         } catch (IOException ex) {
-            System.out.println("IOException is caught");
+            LOGGER.error("IOException is caught");
         } catch (ClassNotFoundException ex) {
-            System.out.println("ClassNotFoundException is caught");
+            LOGGER.error("ClassNotFoundException is caught");
         }
+
+        return object;
     }
 }

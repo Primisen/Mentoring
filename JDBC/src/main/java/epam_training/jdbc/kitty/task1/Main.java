@@ -7,6 +7,10 @@ public class Main {
         MyFirstConnection myFirstConnection = new MyFirstConnection();
 
         print(myFirstConnection.getCats());
+
+        myFirstConnection.setCats(1,"Джерри");
+
+        print(myFirstConnection.getTables());
     }
 
     private static void print(Object object){

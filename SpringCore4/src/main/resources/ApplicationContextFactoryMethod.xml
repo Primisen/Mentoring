@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="DevOps" class="epam.nadia.spring_core_4.main.task2.entity.factory.PositionFactoryMethod"
+          factory-method="getPosition">
+        <property name="salary" ref="SalaryForDevOps"/>
+        <property name="skills">
+            <set>
+                <ref bean="English"/>
+                <ref bean="Python"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean name="SalaryForDevOps" class="epam.nadia.spring_core_4.main.task2.entity.Salary">
+        <property name="salary" value="1200"/>
+    </bean>
+
+    <bean name="English" class="epam.nadia.spring_core_4.main.task2.entity.Skill">
+        <property name="name" value="English"/>
+        <property name="level" value="2"/>
+    </bean>
+
+    <bean name="Python" class="epam.nadia.spring_core_4.main.task2.entity.Skill">
+        <property name="name" value="Python"/>
+        <property name="level" value="3"/>
+    </bean>
+
+    <bean name="Ilya" class="epam.nadia.spring_core_4.main.task2.entity.Employee"
+          init-method="initialize"
+          destroy-method="destroy">
+
+        <property name="name" value="Ilya"/>
+        <property name="position" ref="DevOps"/>
+    </bean>
+
+</beans>

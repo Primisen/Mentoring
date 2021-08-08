@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="A" class="epam.nadia.spring_core_4.main.task1.entity.person.Person">
+        <property name="name" value="Liza"/>
+    </bean>
+
+    <bean name="B" class="epam.nadia.spring_core_4.main.task1.entity.Cat">
+        <constructor-arg name="name" value="Кузя"/>
+        <constructor-arg name="age" value="3"/>
+    </bean>
+
+    <bean name="D" class="epam.nadia.spring_core_4.main.task1.entity.Food" scope="prototype">
+        <property name="food" value="Fish"/>
+    </bean>
+
+    <bean name="C" class="epam.nadia.spring_core_4.main.task1.entity.Cat" >
+        <property name="name" value="Томас"/>
+        <property name="age" value="2"/>
+        <property name="favoriteFood" ref="D"/>
+    </bean>
+
+    <bean name="Kitty" class="epam.nadia.spring_core_4.main.task1.entity.Cat" >
+        <property name="name" value="Томас"/>
+        <property name="age" value="2"/>
+        <property name="favoriteFood" ref="D"/>
+    </bean>
+
+    <bean name="methodWhichChangeCatName" class="epam.nadia.spring_core_4.main.task1.entity.person.MethodReplacer"/>
+
+    <bean name="E" class="epam.nadia.spring_core_4.main.task1.entity.person.Person">
+        <property name="name" value="Gleb"/>
+        <property name="cat" ref="Kitty"/>
+        <replaced-method name="changeTheNameOfTheCat" replacer="methodWhichChangeCatName"/>
+    </bean>
+
+    <bean name="F" class="epam.nadia.spring_core_4.main.task1.entity.BeanLifeCycleDemonstration"
+          init-method="init"
+          destroy-method="destroy"/>
+
+</beans>
